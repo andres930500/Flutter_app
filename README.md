@@ -1,159 +1,151 @@
 # RealMe
 
-Plataforma digital desarrollada como proyecto académico y práctico, orientada a la gestión y exploración de información personal, aplicando principios de desarrollo moderno, arquitectura limpia y buenas prácticas de ingeniería de software.
+Aplicación móvil de **finanzas personales** desarrollada con **Flutter y Dart**, que integra **inteligencia artificial** para generar recomendaciones financieras con enfoque ecológico, promoviendo un consumo responsable y sostenible.
 
 ---
 
-## 🧠 Descripción general
+## 💡 Descripción del proyecto
 
-**RealMe** es una aplicación desarrollada con enfoque **fullstack**, cuyo objetivo es ofrecer una solución organizada y escalable para la gestión de información, integrando un frontend intuitivo con un backend estructurado y desacoplado.
+**RealMe** es una aplicación móvil multiplataforma enfocada en la **gestión de finanzas personales**, que permite a los usuarios visualizar su información financiera, controlar gastos y recibir **recomendaciones ecológicas inteligentes** basadas en su comportamiento de consumo.
 
-El proyecto fue diseñado no solo para cumplir con los requisitos funcionales, sino también para demostrar:
-- Organización del código
-- Separación de responsabilidades
-- Comunicación eficiente entre capas
-- Buenas prácticas de desarrollo
+En su versión actual, la aplicación integra **inteligencia artificial mediante el modelo Gemini 1.1**, utilizado para analizar información financiera y generar recomendaciones orientadas a un consumo más consciente y sostenible.
 
 ---
 
 ## 🎯 Objetivo del proyecto
 
-Desarrollar una aplicación que permita aplicar y consolidar conocimientos en:
+Desarrollar una aplicación móvil que combine:
 
-- Desarrollo frontend y backend
-- Arquitectura de software
-- Manejo de datos
-- Diseño de APIs
-- Control de versiones con Git y GitHub
+- Gestión financiera personal
+- Inteligencia artificial aplicada a finanzas
+- Recomendaciones ecológicas
+- Arquitectura moderna y escalable
+- Integración entre frontend móvil y backend externo
 
----
-
-## ✨ Funcionalidades principales
-
-- Interfaz de usuario clara e intuitiva
-- Comunicación entre frontend y backend mediante API
-- Gestión de datos desde el servidor
-- Validación de información
-- Manejo de errores y estados
-- Arquitectura modular y escalable
-
-*(Las funcionalidades pueden ampliarse o adaptarse según la evolución del proyecto)*
+El proyecto busca demostrar la integración real de **Flutter + IA + servicios backend**, más allá de una aplicación básica.
 
 ---
 
-## 🧱 Arquitectura del sistema
+## ✨ Funcionalidades implementadas
 
-El proyecto sigue una arquitectura **cliente-servidor**, separando claramente las responsabilidades:
+- Visualización de información financiera del usuario
+- Control de gastos y saldo disponible
+- Generación de **alertas** cuando el usuario está próximo a consumir el saldo límite
+- Recomendaciones ecológicas personalizadas basadas en el consumo
+- Integración de **inteligencia artificial (Gemini 1.1)** para análisis y recomendaciones
+- Consumo de endpoints backend desarrollados en **.NET**
+- Arquitectura preparada para escalar y añadir nuevas funcionalidades
 
-### Frontend
-- Encargado de la presentación y experiencia de usuario
-- Consume los servicios expuestos por el backend
-- Maneja la interacción con el usuario
+---
 
-### Backend
-- Lógica de negocio
-- Gestión y validación de datos
-- Exposición de servicios mediante una API
+## 🤖 Inteligencia Artificial
 
-Esta separación permite que el proyecto sea:
-- Más mantenible
-- Más escalable
-- Más fácil de probar y extender
+La aplicación integra **Gemini 1.1** en su versión actual para:
+
+- Analizar patrones de consumo
+- Generar recomendaciones financieras
+- Promover decisiones de gasto más responsables y ecológicas
+
+Esta es la **primera versión** de la implementación de IA dentro del proyecto, sentando las bases para mejoras futuras en modelos y análisis más avanzados.
+
+---
+
+## 🧠 Arquitectura del sistema
+
+El sistema sigue una arquitectura distribuida:
+
+### 📱 Frontend (Mobile)
+- Desarrollado en **Flutter**
+- Lenguaje **Dart**
+- Manejo de UI, estados y experiencia de usuario
+- Consumo de servicios externos mediante HTTP
+
+### 🖥 Backend
+- Endpoints desarrollados en **.NET**
+- Encargados de la lógica de negocio y gestión de datos
+- Publicados en un repositorio independiente
+
+Esta separación permite:
+- Escalabilidad
+- Independencia entre frontend y backend
+- Facilidad de mantenimiento y evolución del sistema
 
 ---
 
 ## 🛠 Tecnologías utilizadas
 
-### Frontend
-- HTML
-- CSS
-- JavaScript  
-*(o framework si aplica)*
+### Mobile
+- **Flutter**
+- **Dart**
+- Arquitectura por capas
+- Widgets personalizados
+- Manejo de estados
+- Navegación Flutter
 
 ### Backend
-- Node.js
-- Express
-- JavaScript
+- **.NET**
 - API REST
+- Endpoints consumidos desde la aplicación móvil
+
+### Inteligencia Artificial
+- **Gemini 1.1**
+- Generación de recomendaciones inteligentes
 
 ### Otras herramientas
 - Git & GitHub
-- Postman (pruebas de endpoints)
 - Visual Studio Code
+- Android Studio
+- Postman (pruebas de endpoints)
 
 ---
 
-## 📂 Estructura del proyecto
+## 📂 Estructura del proyecto (Flutter)
 
-
-RealMe/
-├── frontend/
-│ ├── assets/
-│ ├── css/
-│ ├── js/
-│ └── index.html
-│
-├── backend/
-│ ├── controllers/
-│ ├── routes/
-│ ├── services/
-│ ├── models/
-│ └── app.js
-│
-└── README.md
+lib/
+├── data/
+├── domain/
+├── features/
+├── presentation/
+├── utils/
+└── main.dart
 
 
 ---
 
-## ▶️ Instalación y ejecución
+## ▶️ Ejecución del proyecto
 
 ### Requisitos
-- Node.js
-- npm
-- Navegador web moderno
+- Flutter SDK
+- Android Studio o VS Code
+- Dispositivo físico o emulador
+- Conexión a internet
 
-### Backend
+### Pasos
 ```bash
-cd backend
-npm install
-npm start
-Servidor disponible en:
-
-arduino
-Copiar código
-http://localhost:3000
-Frontend
-Abrir el archivo index.html desde la carpeta frontend
-o servirlo con un servidor local.
-
-🧪 Calidad y buenas prácticas
-Durante el desarrollo de RealMe se aplicaron:
-
-Separación de responsabilidades
-
-Código modular
-
-Buenas prácticas de estructura
-
-Control de versiones con commits claros
-
-Pruebas manuales de endpoints y flujo de datos
+flutter pub get
+flutter run
 
 📌 Estado del proyecto
-✅ Proyecto terminado
-📌 Diseñado como base para futuras mejoras y extensiones.
+
+🚧 Versión 1 – Funcional
+La aplicación cuenta con integración inicial de IA y backend, con una base sólida para evolución futura.
 
 🚀 Posibles mejoras futuras
+
+Análisis financiero más avanzado con IA
+
+Nuevos modelos de recomendación
+
+Persistencia local de datos
+
 Autenticación de usuarios
 
-Persistencia avanzada de datos
+Gráficas financieras avanzadas
 
-Mejoras visuales en la interfaz
-
-Implementación de pruebas automatizadas
-
-Despliegue en producción
+Optimización del sistema de alertas
 
 👨‍💻 Autor
+
 Andrés González
 Ingeniería Informática – Universidad de Caldas
+
